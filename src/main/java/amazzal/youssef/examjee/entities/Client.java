@@ -17,4 +17,13 @@ public class Client {
 
     @OneToMany(mappedBy = "client", fetch = FetchType.LAZY)
     private List<Credit> credits;
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "id=" + id +
+                ", nom='" + nom + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
